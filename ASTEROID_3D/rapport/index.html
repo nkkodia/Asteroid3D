@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Rapport de projet de Synthèse d'Image Avancée
+		</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/beige.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>
+						RAPPORT Systèmes d'Image Avancée
+					</h1>
+					Auteur : Maryline Kouamé-Kodia
+				</section>
+
+				<section>
+
+
+					<h1>
+						INTRODUCTION 
+					</h1>
+
+		Ce rapport a pour but de présenter la réalisation de notre jeu vidéo réalisé avec THREE.js .
+
+		Ce rapport sera subdivisé en trois parties :
+
+
+					
+				</section>
+				
+				<section>
+					<h3>
+						1- Mécanismes du jeu
+					</h3>
+					<h3>
+						2- Graphisme
+					</h3>
+					<h3>
+						3- Difficultés rencontrées
+					</h3>
+
+				</section>
+				<section>
+					<h3> Mécanismes du jeu </h3>
+					<p> Le joueur dispose d'un vaisseau; le but étant d'atteindre avec des balles, les asteroides et les faire disparaitre.
+					Un score est attribué à chaque destruction d'astéroides et par rapport au score on gravit les niveaux au fur et à mesure
+					</p>
+					<a href="#" class="navigate-down">
+						</a>
+
+				</section>
+
+				<section>
+					<h3> Mécanismes du jeu </h3>
+					<p> Rassurrez vous ! Certaines feintes sont permies pour faire de vous les maitres du jeu.
+					</p>
+					<p>
+						<table>
+						<tr>
+
+							<td>
+								Help pour afficher les différentes options
+							</td>
+							<td>
+								H
+							</td>
+					</tr>
+
+					<tr>
+
+							<td>
+								Invincible pour ne plus que les collisions entre asteroides et le vaisseau impactent le joueur
+							</td>
+							<td>
+								I
+							</td>
+					</tr>
+					<tr>
+
+							<td>
+								Joker pour avoir un avantage : passer au niveau suivant
+							</td>
+							<td>
+								J
+							</td>
+					</tr>
+					
+					</table>
+					</p>	
+					
+
+				</section>
+				<section>
+					<h1>
+						Mécanisme  : 
+					</h1>
+					<table>
+					<tr>
+
+							<td>
+								Screeshoot : faire une capture d'écran
+							</td>
+							<td>
+								S
+							</td>
+					</tr>
+					<tr>
+
+							<td>
+								Kill All  : Tuer tous les astéroides et passer au niveau suivant
+							</td>
+							<td>
+								K
+							</td>
+					</tr>
+					<tr>
+
+							<td>
+								Pause 
+							</td>
+							<td>
+								P
+							</td>
+					</tr>
+					<tr>
+
+							<td>
+								FullScreen : Faire un plein écran  
+							</td>
+							<td>
+								F
+							</td>
+							
+					</tr>
+					<tr>
+						<td>
+								Tirer des balles  
+							</td>
+							<td>
+								Barre d'espace
+							</td>
+					</tr>
+					<tr>
+
+							<td>
+								Déplacer à gauche ou à droite
+							</td>
+							<td>
+								Flèches du clavier
+							</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+					<h1>
+						Graphisme  : 
+					</h1>
+						<section>
+							Le vaisseau , les asteroides et les balles : 
+						Le vaisseau est chargé via un objet Json avec <i> THREE.ObjectLoader(); loader.load(example.json)</i>. les asteroides sont des sphères auxquelles on ajoute un matériel qu'on charge depuis des images disponible dans nos fichiers . Les balles ont également été conçues de la même manière.
+						</section>
+
+						<section>
+							L'arrière plan : 
+							On applique une image qu'on a téléchargé sur Internet et qu'on applique directement sur notre fond.
+						</section>		
+					
+			</section>
+			<section>
+				<h1>
+					Difficultés rencontrées
+				</h1>
+				
+
+
+			</section>
+			<section>
+					Somme toute:
+					La réalisation de ce projet a résidé en de grandes recherches que ce soit avec la documentation de THREE.js qui est assez bien nourrit ou des sites Github qui à chaque fois propose des illustrations assez détaillées.
+				</section>
+				<section>
+					La gestion des collisions : Le point qui fut le plus difficile à dompter.
+					Ce <a href="https://nicoschertler.wordpress.com/2013/10/07/elastic-collision-of-circles-and-spheres"> site </a> me fut d'une grande aide pour la vérification des intersections entre les balles et les asteroides , les asteroides et le vaisseau etc...
+
+				</section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>

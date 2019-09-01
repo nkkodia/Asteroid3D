@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Asteroid 3D</title>
+  <script src='src/lib/three.min.js'></script>
+<script src='src/lib/keydrown.js'></script>
+<script src='src/lib/keyboard.js'></script>
+<script src='src/lib/threex/THREEx.FullScreen.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src='src/lib/bootstrap.min.js'></script>
+<script src='src/js/keys.js'></script>
+<script src='src/js/game.js'></script>
+<script src='src/js/bullet.js'></script>
+<script src='src/js/interface.js'></script>
+
+ 
+
+	<link href="src/css/bootstrap.min.css" rel="stylesheet">
+	<link href="src/css/cover.css" rel="stylesheet">
+  <link href="src/css/main.css" rel="stylesheet">
+  </head>
+  <body onload='setup(); updateScore();'>
+
+
+    <div id="info">
+        <div id="info_top_left">
+            <div id="hello" class="row"></div>
+              <div id='currentScore' align="center"></div>
+              <div id='currentLevel' align="center"></div>
+              <div id='currentLives' align="center"></div> 
+        </div>
+  
+        <div id="info_bottom">
+            <i class="jaune">H</i> Help <span style="font-family: symbole" class="trifoce"></span>
+            <i class="jaune">F</i> Fullscreen <span style="font-family: symbole" class="trifoce"></span>
+            <i class="jaune">K</i> KILL ALL<span style="font-family: symbole" class="trifoce"></span>
+            <i class="jaune">P</i> PAUSE<span style="font-family: symbole" class="trifoce"></span>
+            <i class="jaune">S</i> Screenshot
+        </div>
+        
+    </div>
+
+    <div id="level-up">
+    </div>
+
+  						<div id='loading'></div>
+
+
+  						
+
+  						<div id='gameCanvas'></div>
+
+  						<div id="explosionCanvas" style="background-image: url(src/medias/images/space_texture_copy.jpg); display: none">
+  							<img id="explosion" src="./gifs/giphy.gif" rel:auto_play="0" width="560" height="560" />
+  						</div> 
+  					</div>
+
+
+    </div>
+
+    <div id="helpgame" class="help" style="visibility:hidden;">
+
+     <div id="info_middle">
+            <i class='fa fa-caret-left'></i> : Move left <i class='fa fa-caret-right'></i> : Move right <i class='fa fa-minus'></i> : Fire <br/>
+        </div>
+    </div>
+
+</div>
+
+</div>
+
+</body>
+
+
+<img id="explosion" />
+</html>
